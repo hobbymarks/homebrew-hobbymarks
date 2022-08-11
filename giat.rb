@@ -9,7 +9,7 @@ class Giat < Formula
 
   on_macos do
     url "https://github.com/hobbymarks/giat/releases/download/v0.5.7/giat_0.5.7_darwin_all.tar.gz"
-    sha256 "9432e359c4fd2d700afe20b9d1b0b4eb27b9e2c48198c49793887183fd4435ef"
+    sha256 "ed5e5dc5700a7b2abb658ef2203a1c2f54d21bd762c39d8d9824fd75b2edf050"
 
     def install
       bin.install "giat"
@@ -17,17 +17,17 @@ class Giat < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/hobbymarks/giat/releases/download/v0.5.7/giat_0.5.7_linux_amd64.tar.gz"
-      sha256 "2b5ec023b5c1e183e9938bb4138e5a15952e708012c8e12b661e0d721464eb09"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/hobbymarks/giat/releases/download/v0.5.7/giat_0.5.7_linux_arm64.tar.gz"
+      sha256 "3fda28ff265e5db0f3720c4ef7d3de6952b36c296ff25676f806cfacbc8316ab"
 
       def install
         bin.install "giat"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/hobbymarks/giat/releases/download/v0.5.7/giat_0.5.7_linux_arm64.tar.gz"
-      sha256 "5cbb07ce94ddaa381f5a8973cf4bb9be045df72015c9e9d01d3c32b0f9dcb5ea"
+    if Hardware::CPU.intel?
+      url "https://github.com/hobbymarks/giat/releases/download/v0.5.7/giat_0.5.7_linux_amd64.tar.gz"
+      sha256 "5065f333b7aa6161d5b0edf3d972642f6649898a29894bd9bed6b931388714dc"
 
       def install
         bin.install "giat"

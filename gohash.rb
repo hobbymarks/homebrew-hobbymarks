@@ -5,11 +5,11 @@
 class Gohash < Formula
   desc ""
   homepage "https://github.com/hobbymarks/gohash"
-  version "0.3.1"
+  version "0.5.1"
 
   on_macos do
-    url "https://github.com/hobbymarks/gohash/releases/download/v0.3.1/gohash_0.3.1_darwin_all.tar.gz"
-    sha256 "d2242b2f7ecce0e7ead52ded65dab5310d9810cab57e2771fe84a2da3ec3b5e8"
+    url "https://github.com/hobbymarks/gohash/releases/download/v0.5.1/gohash_0.5.1_darwin_all.tar.gz"
+    sha256 "23a0b7da24853d3dc9c22c7bd36d64da4585313de475848e9c5cf4e9d6ae067a"
 
     def install
       bin.install "gohash"
@@ -18,16 +18,16 @@ class Gohash < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/hobbymarks/gohash/releases/download/v0.3.1/gohash_0.3.1_linux_arm64.tar.gz"
-      sha256 "42c055ff2238d79e690f2ea9c546fd96f348ad2ad212e0945b62a97777a347a9"
+      url "https://github.com/hobbymarks/gohash/releases/download/v0.5.1/gohash_0.5.1_linux_arm64.tar.gz"
+      sha256 "d3b0392069bb702e354e6b81c44c795ed40b01e5002ad7a61f1f597512c005f2"
 
       def install
         bin.install "gohash"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/hobbymarks/gohash/releases/download/v0.3.1/gohash_0.3.1_linux_amd64.tar.gz"
-      sha256 "5d56d3bbf670322c7d6ac548ebac645c02d49b3e19f5e25dec1fd18b2b51792a"
+      url "https://github.com/hobbymarks/gohash/releases/download/v0.5.1/gohash_0.5.1_linux_amd64.tar.gz"
+      sha256 "a3ae21ff00756cb592542b315b7d5671855a540fd4bd67b3c8ba78da65d41185"
 
       def install
         bin.install "gohash"

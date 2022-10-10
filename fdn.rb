@@ -5,11 +5,11 @@
 class Fdn < Formula
   desc ""
   homepage "https://github.com/hobbymarks/fdn"
-  version "0.5.0"
+  version "0.5.1"
 
   on_macos do
-    url "https://github.com/hobbymarks/fdn/releases/download/v0.5.0/fdn_0.5.0_darwin_all.tar.gz"
-    sha256 "b5e086c8e9cf6999cfe0551d2ffc4ffdcb7eeec40cb2ffe9e19fbc0ac49a6104"
+    url "https://github.com/hobbymarks/fdn/releases/download/v0.5.1/fdn_0.5.1_darwin_all.tar.gz"
+    sha256 "b4d05f0ed72fb25629bff0dfc740e933fe1aa20a24ee17f7956f360d35d4c27f"
 
     def install
       bin.install "fdn"
@@ -18,16 +18,16 @@ class Fdn < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/hobbymarks/fdn/releases/download/v0.5.0/fdn_0.5.0_linux_amd64.tar.gz"
-      sha256 "6bbc876d7e282b0366ebaf99456d8d02d6bf3deacdc8917edf37bf6c906d68ad"
+      url "https://github.com/hobbymarks/fdn/releases/download/v0.5.1/fdn_0.5.1_linux_amd64.tar.gz"
+      sha256 "018338901de939333ec05e5b9a187cfabf11ad70d056ed9bc8100bb806a77050"
 
       def install
         bin.install "fdn"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/hobbymarks/fdn/releases/download/v0.5.0/fdn_0.5.0_linux_arm64.tar.gz"
-      sha256 "fda8f135ddd645a35a54046cad0e8d5f7a5725baa837ee861696ef8d4a64f55d"
+      url "https://github.com/hobbymarks/fdn/releases/download/v0.5.1/fdn_0.5.1_linux_arm64.tar.gz"
+      sha256 "c6fcc50fbae7cd5f4b8fbfe8bc573046786673ebd22c5122875c77436adf2244"
 
       def install
         bin.install "fdn"

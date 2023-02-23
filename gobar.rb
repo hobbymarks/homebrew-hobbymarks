@@ -5,11 +5,11 @@
 class Gobar < Formula
   desc ""
   homepage "https://github.com/hobbymarks/gobar"
-  version "0.0.1"
+  version "0.0.2"
 
   on_macos do
-    url "https://github.com/hobbymarks/gobar/releases/download/v0.0.1/gobar_0.0.1_darwin_all.tar.gz"
-    sha256 "474de26e5a1d357d437d440653b5725b419b79bcd2190f3e99a7ec5308df031f"
+    url "https://github.com/hobbymarks/gobar/releases/download/v0.0.2/gobar_0.0.2_darwin_all.tar.gz"
+    sha256 "6c7ee2a71a3b41be5b09bd58ecca9711d2b21ba79d4fdd21ac620053467bfd0f"
 
     def install
       bin.install "gobar"
@@ -17,17 +17,17 @@ class Gobar < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/hobbymarks/gobar/releases/download/v0.0.1/gobar_0.0.1_linux_amd64.tar.gz"
-      sha256 "accd98ac48b3de96aa55d46f13f4f3108efd27d7905d1bf1eaa5d824d68399cc"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/hobbymarks/gobar/releases/download/v0.0.2/gobar_0.0.2_linux_arm64.tar.gz"
+      sha256 "0cb395ab736f0a4bb4e23662ae8dcdee9b699d7b813d8d2fac55cdba3e27016b"
 
       def install
         bin.install "gobar"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/hobbymarks/gobar/releases/download/v0.0.1/gobar_0.0.1_linux_arm64.tar.gz"
-      sha256 "a62c3bf065c16d3512c23a2f110a357c61de70889dfa43975ce4520dd8fca205"
+    if Hardware::CPU.intel?
+      url "https://github.com/hobbymarks/gobar/releases/download/v0.0.2/gobar_0.0.2_linux_amd64.tar.gz"
+      sha256 "dcc023f7334e57596375c71af37e8a295f80ae0d8ccb346fb9df133fb55ce964"
 
       def install
         bin.install "gobar"
